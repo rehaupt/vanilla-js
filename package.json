@@ -1,0 +1,12 @@
+{
+  "name": "vanillajs",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "preview": ""
+  },
+  "packageManager": "yarn@3.6.0"
+}
