@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -28,6 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Vanilla JS Demo',
       template: path.resolve(__dirname, './src/template.html'), // template file
+      favicon: './src/assets/favicon.ico',
       filename: 'index.html', // output file
     }),
     new CleanWebpackPlugin(),
@@ -39,4 +40,4 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, './dist'),
   },
-}
+};
