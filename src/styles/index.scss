@@ -1,4 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;700;900&family=Merriweather:wght@400;700&display=swap');
+@use "@carbon/react";
+
+@use "@carbon/react/scss/breakpoint" as *;
+@use "../components/TutorialHeader/tutorial-header";
+/// Padding was introduced in 10.3.0, needs an option to let grid set the viewport gutter
+/// @link https://github.com/carbon-design-system/carbon/issues/3010
+.cds--content {
+  margin-top: 3rem;
+  padding: 0;
+  background: var(--cds-background);
+}
+
+.cds--content .cds--css-grid {
+  max-width: 100%;
+  @include breakpoint(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 :root {
   /* Colors */
@@ -51,11 +69,11 @@
   --indigo-muted: #f1f2fd;
 
   /* Font family */
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont,
-    'Helvetica Neue', Arial, sans-serif;
+  --font-family-base: "Inter", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: Menlo, monospace;
-  --font-family-heading: 'Merriweather', -apple-system, BlinkMacSystemFont,
-    'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: "Merriweather", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
 
   /* Font color */
   --font-color-base: var(--gray-7);
@@ -208,12 +226,12 @@ h4:not(:first-child) {
   margin-top: 3rem;
 }
 
-h2+h3 {
+h2 + h3 {
   margin-top: 1.5rem !important;
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   margin: 0 0 1rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
@@ -260,6 +278,7 @@ h5 {
   color: #646cffaa;
   display: grid;
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 #app {
